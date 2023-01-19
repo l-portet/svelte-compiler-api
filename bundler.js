@@ -11,8 +11,8 @@ const emptyFile = path.join(os.tmpdir(), 'App.svelte');
 fs.writeFileSync(emptyFile, '');
 
 module.exports = async function bundler(content, { autorun = false }) {
-  console.log('readdir tmp');
-  fs.readdirSync('tmp' + os.tmpdir()).forEach((file) => {
+  console.log('readdir ' + os.tmpdir());
+  fs.readdirSync(os.tmpdir()).forEach((file) => {
     console.log(file);
   });
 
