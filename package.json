@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "dev": "node scripts/dev.js",
+    "clean": "rimraf App.svelte",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -24,5 +25,8 @@
     "rollup": "^3.10.0",
     "rollup-plugin-svelte": "^7.1.0",
     "svelte": "^3.55.1"
+  },
+  "devDependencies": {
+    "rimraf": "^4.1.1"
   }
 }

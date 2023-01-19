@@ -1,6 +1,10 @@
+const fs = require('fs');
 const { rollup } = require('rollup');
 const svelte = require('rollup-plugin-svelte');
 const resolve = require('@rollup/plugin-node-resolve');
+
+// Ensure we have an empty file at root in functions execution
+fs.writeFileSync('App.svelte', '');
 
 module.exports = async function bundler(content, { autorun = false }) {
   const emptyFile = 'App.svelte';
