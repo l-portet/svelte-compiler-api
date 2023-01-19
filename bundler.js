@@ -5,26 +5,26 @@ const resolve = require('@rollup/plugin-node-resolve');
 
 // Ensure we have an empty file at root in functions execution
 // fs.writeFileSync('App.svelte', '');
-console.log('process.cwd()');
-console.log(process.cwd());
-console.log('readdir .');
-fs.readdirSync('.').forEach((file) => {
-  console.log(file);
-});
-console.log('readdir ..');
-fs.readdirSync('..').forEach((file) => {
-  console.log(file);
-});
-console.log('readdir ../..');
-fs.readdirSync('../..').forEach((file) => {
-  console.log(file);
-});
-console.log('readdir ../../..');
-fs.readdirSync('../../..').forEach((file) => {
-  console.log(file);
-});
 
 module.exports = async function bundler(content, { autorun = false }) {
+  console.log('process.cwd()');
+  console.log(process.cwd());
+  console.log('readdir .');
+  fs.readdirSync('.').forEach((file) => {
+    console.log(file);
+  });
+  console.log('readdir ..');
+  fs.readdirSync('..').forEach((file) => {
+    console.log(file);
+  });
+  console.log('readdir ../..');
+  fs.readdirSync('../..').forEach((file) => {
+    console.log(file);
+  });
+  console.log('readdir ../../..');
+  fs.readdirSync('../../..').forEach((file) => {
+    console.log(file);
+  });
   const emptyFile = 'App.svelte';
 
   const bundle = await rollup({
