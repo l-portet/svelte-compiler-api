@@ -3,8 +3,9 @@ const { rollup } = require('rollup');
 const svelte = require('rollup-plugin-svelte');
 const resolve = require('@rollup/plugin-node-resolve');
 
+const emptyFile = 'tmp/App.svelte';
 // Ensure we have an empty file at root in functions execution
-// fs.writeFileSync('App.svelte', '');
+fs.writeFileSync(emptyFile, '');
 
 module.exports = async function bundler(content, { autorun = false }) {
 
@@ -12,13 +13,12 @@ module.exports = async function bundler(content, { autorun = false }) {
   fs.readdirSync('.').forEach((file) => {
     console.log(file);
   });
-  console.log('readdir ..');
-  fs.readdirSync('..').forEach((file) => {
+  console.log('readdir tmp');
+  fs.readdirSync('tmp').forEach((file) => {
     console.log(file);
   });
   console.log('process.cwd()');
   console.log(process.cwd());
-  const emptyFile = 'App.svelte';
 
   const bundle = await rollup({
     input: emptyFile,
