@@ -1,8 +1,11 @@
 const express = require('express');
+const cors = require('cors');
 const rawBody = require('./middleware/raw-body');
 const bundler = require('./bundler');
 
 const app = express();
+
+app.use(cors());
 
 app.get('/', (req, res) => {
   res.setHeader('Content-Type', 'text/html');

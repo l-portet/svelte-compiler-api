@@ -21,6 +21,7 @@
   "homepage": "https://github.com/l-portet/svelte-compiler-api#readme",
   "dependencies": {
     "@rollup/plugin-node-resolve": "^15.0.1",
+    "cors": "^2.8.5",
     "express": "^4.18.2",
     "rollup": "^3.10.0",
     "rollup-plugin-svelte": "^7.1.0",
