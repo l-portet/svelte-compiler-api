@@ -4,7 +4,25 @@ const svelte = require('rollup-plugin-svelte');
 const resolve = require('@rollup/plugin-node-resolve');
 
 // Ensure we have an empty file at root in functions execution
-fs.writeFileSync('App.svelte', '');
+// fs.writeFileSync('App.svelte', '');
+console.log('process.cwd()');
+console.log(process.cwd());
+console.log('readdir .');
+fs.readdirSync('.').forEach((file) => {
+  console.log(file);
+});
+console.log('readdir ..');
+fs.readdirSync('..').forEach((file) => {
+  console.log(file);
+});
+console.log('readdir ../..');
+fs.readdirSync('../..').forEach((file) => {
+  console.log(file);
+});
+console.log('readdir ../../..');
+fs.readdirSync('../../..').forEach((file) => {
+  console.log(file);
+});
 
 module.exports = async function bundler(content, { autorun = false }) {
   const emptyFile = 'App.svelte';
