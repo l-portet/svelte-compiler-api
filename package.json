@@ -4,6 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "dev": "node scripts/dev.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -18,6 +19,10 @@
   },
   "homepage": "https://github.com/l-portet/svelte-compiler-api#readme",
   "dependencies": {
-    "express": "^4.18.2"
+    "@rollup/plugin-node-resolve": "^15.0.1",
+    "express": "^4.18.2",
+    "rollup": "^3.10.0",
+    "rollup-plugin-svelte": "^7.1.0",
+    "svelte": "^3.55.1"
   }
 }
