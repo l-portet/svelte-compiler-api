@@ -8,7 +8,7 @@
 
 Svelte is a great framework, but it's not always easy to use it simply in any environment (like Codepen). This package provides a wrapper around the Svelte compiler, which allows you to compile a single Svelte component to executable JS.
 
-## How?
+## How it woks
 
 Just send a `POST` request to the API with the Svelte component as the body. The API will return the compiled JS.
 
@@ -18,6 +18,8 @@ curl \
   -d "<script>let msg = 'Hello world!'</script> <p>{msg}</p>" \
   https://svelte-compiler-api.onrender.com
 ```
+
+### Options
 
 If you need to pass options to the compiler, you can send them as query parameters. For example, to compile a Svelte component with the `autorun` option, you can send a request to `https://svelte-compiler-api.onrender.com/?autorun`. Autrorun will automatically inject the component in the body when it's imported.
 
