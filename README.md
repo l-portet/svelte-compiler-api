@@ -2,6 +2,8 @@
 
 > An API to compile a Svelte component to executable JS 📦
 
+[demo](https://codepen.io/l-portet/pen/GRBOBoM)
+
 ## Why?
 
 Svelte is a great framework, but it's not always easy to use it simply in any environment (like Codepen). This package provides a wrapper around the Svelte compiler, which allows you to compile a single Svelte component to executable JS.
