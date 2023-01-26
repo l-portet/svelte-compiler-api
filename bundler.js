@@ -17,6 +17,10 @@ fs.copySync('./node_modules', modulesDir);
 module.exports = async function bundler(content, { autorun = false }) {
   const bundle = await rollup({
     input: emptyFile,
+    resolveId(source, importer) {
+      console.log(source, importer);
+      return null;
+    },
     plugins: [
       {
         name: 'Dynamic file loader',

@@ -4,6 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "start": "node scripts/start.js",
     "dev": "node scripts/dev.js",
     "clean": "rimraf App.svelte",
     "test": "echo \"Error: no test specified\" && exit 1"
