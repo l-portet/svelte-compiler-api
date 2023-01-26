@@ -2,7 +2,7 @@
 
 > An API to compile a Svelte component to executable JS 📦
 
-[demo](https://codepen.io/l-portet/pen/GRBOBoM)
+[Demo](https://codepen.io/l-portet/pen/GRBOBoM)
 
 ## Why?
 
