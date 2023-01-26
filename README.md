@@ -4,7 +4,7 @@
 
 ## Why?
 
-Svelte is a great framework, but it's not always easy to use it simply in any environment. This package provides a wrapper around the Svelte compiler, which allows you to compile a single Svelte component to executable JS.
+Svelte is a great framework, but it's not always easy to use it simply in any environment (like Codepen). This package provides a wrapper around the Svelte compiler, which allows you to compile a single Svelte component to executable JS.
 
 ## How?
 
