@@ -9,6 +9,7 @@ const resolve = require('@rollup/plugin-node-resolve');
 const tmpdir = os.tmpdir();
 const emptyFile = path.join(tmpdir, 'App.svelte');
 const modulesDir = path.join(tmpdir, './node_modules');
+
 // Ensure we have an empty file at root in functions execution
 fs.writeFileSync(emptyFile, '');
 fs.rmSync(modulesDir, { force: true, recursive: true });
@@ -17,10 +18,6 @@ fs.copySync('./node_modules', modulesDir);
 module.exports = async function bundler(content, { autorun = false }) {
   const bundle = await rollup({
     input: emptyFile,
-    resolveId(source, importer) {
-      console.log(source, importer);
-      return null;
-    },
     plugins: [
       {
         name: 'Dynamic file loader',
