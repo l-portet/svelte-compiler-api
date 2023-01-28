@@ -10,7 +10,7 @@ Svelte is a great framework, but it's not always easy to use it simply in any en
 
 ## How it woks
 
-Just send a `POST` request to the API with the Svelte component as the body. The API will return the compiled JS.
+Just send a `POST` request to the API with the Svelte component as the body. The API will return the compiled JS output.
 
 ```bash
 curl \
