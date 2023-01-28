@@ -1,1 +1,4 @@
+# deps
 node_modules
+# local
+*.local.*
