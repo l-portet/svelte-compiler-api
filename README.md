@@ -28,3 +28,5 @@ At this time we don't support all of the options that the Svelte compiler suppor
 ## Disclaimer
 
 The API is hosted on a free plan on [Render](https://render.com). This means that the API may be slow and may go down. If you need a more reliable API, you can host it yourself.
+
+Also, feel free to open an issue if you find a bug.
